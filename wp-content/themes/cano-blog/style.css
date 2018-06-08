@@ -1611,7 +1611,6 @@ object {
 
 .site-header {
     box-shadow: 0 0 3px 3px rgba(155, 155, 155, 0.19);
-    margin-bottom: 40px;
 	background-color:#fff;
 }
 
@@ -1626,7 +1625,9 @@ height: 50px;
 .site-header .navigation {
 
 }
-
+.site-main {
+    padding-top: 40px;
+}
 
 .site-header .navigation .menu li {
     float: right;
@@ -1921,7 +1922,58 @@ SIte footer*/
 	max-height:350px;
 }
 
-
-
-
-
+.search-panel {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-top: 12px;
+    font-size: 13px;
+}
+.search-panel table {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    z-index: 10;
+}
+.form-control.search {
+    display: block;
+    width: 100%;
+    padding: .3rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    min-height: 38px;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem 0px 0px .25rem !important;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    box-shadow: none;
+    padding:0px 15px;
+    border-right: none;
+    font-size: 13px;
+}
+.search-panel table tr td {
+    margin:0px 5px 0px;
+    display: inline-block;
+    padding-left: 20px;
+}
+.radio label {
+    display: inline-flex;
+    position: relative;
+    padding-left: 0px;
+    margin-right: 10px;
+}
+.search-panel table tr td.radio + .radio{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.search-panel [type="submit"]{
+    text-transform: capitalize;
+    min-width: 135px;
+    background-color: #0100ff;
+    color: #fff;
+    border-color: #0100ff;
+    border-radius: 0px .25rem .25rem 0px !important;
+}
