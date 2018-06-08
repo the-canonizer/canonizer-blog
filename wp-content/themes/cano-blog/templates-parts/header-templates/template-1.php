@@ -11,7 +11,7 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
                 if(!empty($bug_blog_logo)):
                     ?>
                     <div class="main-logo">
-                        <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_theme_mod('bug_blog_logo'));
+                        <a href="http://<?php echo $_SERVER['HTTP_HOST'] ?>"><img src="<?php echo esc_url(get_theme_mod('bug_blog_logo'));
                             ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>"></a>
                     </div><!-- /Logo -->
                     <?php
