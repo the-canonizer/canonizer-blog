@@ -25,7 +25,7 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
 			$bug_blog_poweredby = get_theme_mod('bug_blog_poweredby');
 			$bug_blog_dev_by = get_theme_mod('bug_blog_dev_by');
 
-			$bug_blog_copyright_text = get_theme_mod('bug_blog_copyright_text');
+			$bug_blog_copyright_text = preg_replace('/[\-].*[\)]/U' , "-".date('Y').")", get_theme_mod('bug_blog_copyright_text'));
 
 			?>
 
@@ -48,7 +48,7 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
 					<?php
 				else:
 					?>
-                    <span class="footer-copyright"><?php echo esc_html($bug_blog_copyright_text); ?></span>
+                    <span class="footer-copyright"><?php echo ($bug_blog_copyright_text); ?></span>
 					<?php
 
 				endif;
@@ -59,6 +59,14 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
 
 
             </div>
+		<div class="row">
+
+			<div class="col-md-12">
+			<span class="footer-copyright" style="margin-left:-110px;">
+				<a style="color:#FFF;" href="https://canonizer.com/privacypolicy">Privacy Policy</a> | <a style="color:#FFF;" href="https://canonizer.com/termservice">Terms & Services</a>
+			</span>
+ 			</div>
+		</div>
 
         </div>
 
